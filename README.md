@@ -12,8 +12,8 @@
 ### 1. کلون کردن پروژه
 ابتدا پروژه را کلون کنید و وارد دایرکتوری آن شوید:
 ```bash
-git clone <آدرس-ریپو>
-cd <نام-دایرکتوری-پروژه>
+git clone https://github.com/naderii/gitlab-nginx-docker.git
+cd gitlab-nginx-docker
 ```
 
 ### 2. ویرایش فایل کانفیگ‌ها
@@ -27,8 +27,8 @@ docker-compose up --build -d
 ### 4. دسترسی به GitLab
 پس از اجرا، می‌توانید از طریق مرورگر به GitLab دسترسی داشته باشید:
 
-HTTP: http://gitlab.local
-HTTPS: https://gitlab.local
+- HTTP: http://gitlab.local
+- HTTPS: https://gitlab.local
 ### 5. بررسی وضعیت کانتینرها
 برای مشاهده وضعیت کانتینرها
 ```bash
