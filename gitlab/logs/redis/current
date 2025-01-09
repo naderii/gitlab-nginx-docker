@@ -1,0 +1,40 @@
+2025-01-09_06:01:07.72102 284:C 09 Jan 2025 06:01:07.720 # oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+2025-01-09_06:01:07.72106 284:C 09 Jan 2025 06:01:07.720 # Redis version=7.0.15, bits=64, commit=f35f36a2, modified=1, pid=284, just started
+2025-01-09_06:01:07.72107 284:C 09 Jan 2025 06:01:07.720 # Configuration loaded
+2025-01-09_06:01:07.72126 284:M 09 Jan 2025 06:01:07.721 * monotonic clock: POSIX clock_gettime
+2025-01-09_06:01:07.72159                 _._                                                  
+2025-01-09_06:01:07.72159            _.-``__ ''-._                                             
+2025-01-09_06:01:07.72159       _.-``    `.  `_.  ''-._           Redis 7.0.15 (f35f36a2/1) 64 bit
+2025-01-09_06:01:07.72159   .-`` .-```.  ```\/    _.,_ ''-._                                  
+2025-01-09_06:01:07.72161  (    '      ,       .-`  | `,    )     Running in standalone mode
+2025-01-09_06:01:07.72161  |`-._`-...-` __...-.``-._|'` _.-'|     Port: 0
+2025-01-09_06:01:07.72161  |    `-._   `._    /     _.-'    |     PID: 284
+2025-01-09_06:01:07.72161   `-._    `-._  `-./  _.-'    _.-'                                   
+2025-01-09_06:01:07.72161  |`-._`-._    `-.__.-'    _.-'_.-'|                                  
+2025-01-09_06:01:07.72161  |    `-._`-._        _.-'_.-'    |           https://redis.io       
+2025-01-09_06:01:07.72162   `-._    `-._`-.__.-'_.-'    _.-'                                   
+2025-01-09_06:01:07.72162  |`-._`-._    `-.__.-'    _.-'_.-'|                                  
+2025-01-09_06:01:07.72162  |    `-._`-._        _.-'_.-'    |                                  
+2025-01-09_06:01:07.72162   `-._    `-._`-.__.-'_.-'    _.-'                                   
+2025-01-09_06:01:07.72162       `-._    `-.__.-'    _.-'                                       
+2025-01-09_06:01:07.72162           `-._        _.-'                                           
+2025-01-09_06:01:07.72162               `-.__.-'                                               
+2025-01-09_06:01:07.72162 
+2025-01-09_06:01:07.72163 284:M 09 Jan 2025 06:01:07.721 # Server initialized
+2025-01-09_06:01:07.72164 284:M 09 Jan 2025 06:01:07.721 # WARNING Memory overcommit must be enabled! Without it, a background save or replication may fail under low memory condition. Being disabled, it can can also cause failures without low memory condition, see https://github.com/jemalloc/jemalloc/issues/1328. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
+2025-01-09_06:01:07.72187 284:M 09 Jan 2025 06:01:07.721 * The server is now ready to accept connections at /var/opt/gitlab/redis/redis.socket
+2025-01-09_06:06:08.00886 284:M 09 Jan 2025 06:06:08.008 * 10 changes in 300 seconds. Saving...
+2025-01-09_06:06:08.00985 284:M 09 Jan 2025 06:06:08.009 * Background saving started by pid 1240
+2025-01-09_06:06:08.08022 1240:C 09 Jan 2025 06:06:08.080 * DB saved on disk
+2025-01-09_06:06:08.08139 1240:C 09 Jan 2025 06:06:08.081 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+2025-01-09_06:06:08.11054 284:M 09 Jan 2025 06:06:08.110 * Background saving terminated with success
+2025-01-09_06:11:09.01534 284:M 09 Jan 2025 06:11:09.015 * 10 changes in 300 seconds. Saving...
+2025-01-09_06:11:09.01560 284:M 09 Jan 2025 06:11:09.015 * Background saving started by pid 1402
+2025-01-09_06:11:09.08971 1402:C 09 Jan 2025 06:11:09.089 * DB saved on disk
+2025-01-09_06:11:09.09086 1402:C 09 Jan 2025 06:11:09.090 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+2025-01-09_06:11:09.11645 284:M 09 Jan 2025 06:11:09.116 * Background saving terminated with success
+2025-01-09_06:16:10.09820 284:M 09 Jan 2025 06:16:10.098 * 10 changes in 300 seconds. Saving...
+2025-01-09_06:16:10.09847 284:M 09 Jan 2025 06:16:10.098 * Background saving started by pid 1632
+2025-01-09_06:16:10.22288 1632:C 09 Jan 2025 06:16:10.222 * DB saved on disk
+2025-01-09_06:16:10.22319 1632:C 09 Jan 2025 06:16:10.223 * Fork CoW for RDB: current 1 MB, peak 1 MB, average 0 MB
+2025-01-09_06:16:10.29953 284:M 09 Jan 2025 06:16:10.299 * Background saving terminated with success

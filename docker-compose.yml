@@ -7,6 +7,8 @@ services:
     restart: always
     ports:
       - '8022:22'
+      - '8080:80'
+      - '8443:443'
     volumes:
       - './gitlab/config:/etc/gitlab'
       - './gitlab/logs:/var/log/gitlab'
@@ -18,7 +20,7 @@ services:
 
   nginx:
     build:
-      context: ./nginx
+      context: .
     container_name: nginx-proxy
     restart: always
     ports:

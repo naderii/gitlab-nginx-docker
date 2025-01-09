@@ -1,0 +1,21 @@
+2025-01-09_06:01:31.01781 {"time":"2025-01-09T06:01:31.017753701Z","level":"INFO","msg":"Running KAS","kas":"gitlab-kas/v17.7.1/v17.7.1"}
+2025-01-09_06:01:31.01869 {"time":"2025-01-09T06:01:31.018683632Z","level":"INFO","msg":"Using own private API URL","url":"grpc://localhost:8155"}
+2025-01-09_06:01:31.01902 {"time":"2025-01-09T06:01:31.019021162Z","level":"INFO","msg":"AutoFlow module is not enabled in config","mod_name":"autoflow"}
+2025-01-09_06:01:31.01909 {"time":"2025-01-09T06:01:31.019093654Z","level":"INFO","msg":"Starting","mod_name":"kubernetes_api"}
+2025-01-09_06:01:31.01913 {"time":"2025-01-09T06:01:31.019117659Z","level":"INFO","msg":"Starting","mod_name":"usage_metrics"}
+2025-01-09_06:01:31.01914 {"time":"2025-01-09T06:01:31.01913106Z","level":"INFO","msg":"Starting","mod_name":"notifications"}
+2025-01-09_06:01:31.01914 {"time":"2025-01-09T06:01:31.019136323Z","level":"INFO","msg":"Starting","mod_name":"observability"}
+2025-01-09_06:01:31.01915 {"time":"2025-01-09T06:01:31.01914884Z","level":"INFO","msg":"Starting","mod_name":"event_tracker"}
+2025-01-09_06:01:31.01918 {"time":"2025-01-09T06:01:31.019177404Z","level":"INFO","msg":"Starting","mod_name":"kas2agentk_tunnel"}
+2025-01-09_06:01:31.01937 {"time":"2025-01-09T06:01:31.019354621Z","level":"INFO","msg":"Observability endpoint is up","mod_name":"observability","net_network":"tcp","net_address":"127.0.0.1:8151"}
+2025-01-09_06:01:31.01938 {"time":"2025-01-09T06:01:31.019378062Z","level":"INFO","msg":"Kubernetes API endpoint is up","mod_name":"kubernetes_api","net_network":"tcp","net_address":"127.0.0.1:8154"}
+2025-01-09_06:01:31.01943 {"time":"2025-01-09T06:01:31.019426095Z","level":"INFO","msg":"API endpoint is up","net_network":"tcp","net_address":"127.0.0.1:8153"}
+2025-01-09_06:01:31.01944 {"time":"2025-01-09T06:01:31.019433556Z","level":"INFO","msg":"Agentk API endpoint is up","net_network":"tcp","net_address":"127.0.0.1:8150","is_websocket":true}
+2025-01-09_06:01:31.01947 {"time":"2025-01-09T06:01:31.019469516Z","level":"INFO","msg":"Private API endpoint is up","net_network":"tcp","net_address":"127.0.0.1:8155"}
+2025-01-09_06:01:32.87484 {"time":"2025-01-09T06:01:32.645465822Z","level":"ERROR","msg":"Failed to get receptive agents","mod_name":"kas2agentk_tunnel","error":"Get \"http://gitlab.local/api/v4/internal/kubernetes/receptive_agents\": dial tcp: lookup gitlab.local on 127.0.0.11:53: no such host"}
+2025-01-09_06:01:45.51325 {"time":"2025-01-09T06:01:45.513179634Z","level":"ERROR","msg":"Failed to get receptive agents","mod_name":"kas2agentk_tunnel","error":"Get \"http://gitlab.local/api/v4/internal/kubernetes/receptive_agents\": dial tcp: lookup gitlab.local on 127.0.0.11:53: no such host"}
+2025-01-09_06:02:08.62492 {"time":"2025-01-09T06:02:08.624899131Z","level":"ERROR","msg":"Failed to get receptive agents","mod_name":"kas2agentk_tunnel","error":"Get \"http://gitlab.local/api/v4/internal/kubernetes/receptive_agents\": dial tcp: lookup gitlab.local on 127.0.0.11:53: no such host"}
+2025-01-09_06:03:14.29427 {"time":"2025-01-09T06:03:14.294171082Z","level":"ERROR","msg":"Failed to get receptive agents","mod_name":"kas2agentk_tunnel","error":"Get \"http://gitlab.local/api/v4/internal/kubernetes/receptive_agents\": dial tcp: lookup gitlab.local on 127.0.0.11:53: no such host"}
+2025-01-09_06:04:55.05105 {"time":"2025-01-09T06:04:55.050971916Z","level":"ERROR","msg":"Failed to get receptive agents","mod_name":"kas2agentk_tunnel","error":"Get \"http://gitlab.local/api/v4/internal/kubernetes/receptive_agents\": dial tcp: lookup gitlab.local on 127.0.0.11:53: no such host"}
+2025-01-09_06:09:21.07327 {"time":"2025-01-09T06:09:21.07324216Z","level":"ERROR","msg":"Failed to get receptive agents","mod_name":"kas2agentk_tunnel","error":"Get \"http://gitlab.local/api/v4/internal/kubernetes/receptive_agents\": dial tcp: lookup gitlab.local on 127.0.0.11:53: no such host"}
+2025-01-09_06:17:24.48670 {"time":"2025-01-09T06:17:24.486592784Z","level":"ERROR","msg":"Failed to get receptive agents","mod_name":"kas2agentk_tunnel","error":"Get \"http://gitlab.local/api/v4/internal/kubernetes/receptive_agents\": dial tcp: lookup gitlab.local on 127.0.0.11:53: no such host"}

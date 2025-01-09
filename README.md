@@ -34,3 +34,13 @@ docker-compose up --build -d
 ```bash
 docker ps
 ```
+
+## دیدن پسورد
+‍‍‍``` bash
+sudo docker exec -it gitlab-server grep 'Password:' /etc/gitlab/initial_root_password
+```
+### ریست پسورد
+```bash
+sudo docker exec -it gitlab-server bash
+gitlab-rake "gitlab:password:reset"
+```
