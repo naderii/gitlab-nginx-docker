@@ -1,6 +1,4 @@
-version: '3.8'
 services:
-
   gitlab-server:
     image: 'gitlab/gitlab-ce:latest'
     container_name: gitlab-server
@@ -10,13 +8,18 @@ services:
       - '8080:80'
       - '8443:443'
     volumes:
-      - './gitlab/config:/etc/gitlab'
-      - './gitlab/logs:/var/log/gitlab'
-      - './gitlab/data:/var/opt/gitlab'
+      - gitlab_config:/etc/gitlab
+      - gitlab_logs:/var/log/gitlab
+      - gitlab_data:/var/opt/gitlab
     environment:
       GITLAB_OMNIBUS_CONFIG: |
         external_url 'http://gitlab.local'
         gitlab_rails['gitlab_shell_ssh_port'] = 8022
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8080"]
+      interval: 1m
+      timeout: 10s
+      retries: 3
 
   nginx:
     build:
@@ -26,5 +29,23 @@ services:
     ports:
       - '80:80'
       - '443:443'
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro
     depends_on:
       - gitlab-server
+    networks:
+      - gitlab_net
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:80"]
+      interval: 1m
+      timeout: 10s
+      retries: 3
+
+networks:
+  gitlab_net:
+    driver: bridge
+
+volumes:
+  gitlab_config:
+  gitlab_logs:
+  gitlab_data:

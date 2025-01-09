@@ -1,8 +1,0 @@
-  Rendered layout layouts/mailer/devise.html.haml (Duration: 15.2ms | Allocations: 26717)
-Delivered mail 677f693bb2000_21b7d17c135df@5ea5c43af9d5.mail (3.1ms)
-  Rendered layout layouts/mailer/devise.html.haml (Duration: 1.5ms | Allocations: 885)
-Delivered mail 677f69514f818_21b7d0b41379b@5ea5c43af9d5.mail (2.8ms)
-  Rendered layout layouts/mailer/devise.html.haml (Duration: 32.9ms | Allocations: 31090)
-Delivered mail 677f696b1bf6d_21b7d91013959@5ea5c43af9d5.mail (8.1ms)
-  Rendered layout layouts/mailer/devise.html.haml (Duration: 1.7ms | Allocations: 890)
-Delivered mail 677f699061bb1_21b7d14014113@5ea5c43af9d5.mail (2.8ms)

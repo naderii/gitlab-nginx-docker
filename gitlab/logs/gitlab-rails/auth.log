@@ -1,9 +1,0 @@
-# Logfile created on 2025-01-09 05:58:36 +0000 by logger.rb/v1.5.3
-{"severity":"INFO","time":"2025-01-09T05:58:36.429Z","gitlab_throttle_user_allowlist":[]}
-{"severity":"INFO","time":"2025-01-09T05:59:09.724Z","gitlab_throttle_user_allowlist":[]}
-{"severity":"INFO","time":"2025-01-09T06:01:52.828Z","gitlab_throttle_user_allowlist":[]}
-{"severity":"INFO","time":"2025-01-09T06:02:00.744Z","gitlab_throttle_user_allowlist":[]}
-{"severity":"INFO","time":"2025-01-09T06:02:40.329Z","gitlab_throttle_user_allowlist":[]}
-{"severity":"INFO","time":"2025-01-09T06:13:08.236Z","gitlab_throttle_user_allowlist":[]}
-{"severity":"INFO","time":"2025-01-09T06:13:30.287Z","gitlab_throttle_user_allowlist":[]}
-{"severity":"INFO","time":"2025-01-09T06:14:04.677Z","gitlab_throttle_user_allowlist":[]}
