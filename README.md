@@ -36,9 +36,10 @@ docker ps
 ```
 
 ## دیدن پسورد
-‍‍‍```bash
+```bash
 sudo docker exec -it gitlab-server grep 'Password:' /etc/gitlab/initial_root_password
 ```
+
 ### ریست پسورد
 ```bash
 sudo docker exec -it gitlab-server bash
