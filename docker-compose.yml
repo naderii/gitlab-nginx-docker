@@ -7,7 +7,7 @@ services:
     restart: always
     ports:
       - "${GITLAB_SSH_PORT}:22"
-      - "8080:80"
+      - "8085:80"
       - "8443:443"
     volumes:
       - ./gitlab/config:/etc/gitlab
@@ -47,7 +47,7 @@ services:
     image: certbot/certbot:latest
     container_name: certbot
     ports:
-      - "8081:80"
+      - "8086:80"
       - "8444:443"
     restart: always
     volumes:
