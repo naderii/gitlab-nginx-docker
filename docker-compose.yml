@@ -26,6 +26,8 @@ services:
       interval: 1m
       timeout: 10s
       retries: 3
+    env_file:
+      - .env
 
   nginx:
     build: .
@@ -42,6 +44,8 @@ services:
       - gitlab
     networks:
       - ${GITLAB_NETWORK}
+    env_file:
+      - .env
 
   certbot:
     image: certbot/certbot:latest
@@ -63,9 +67,9 @@ services:
       done"
     networks:
       - ${GITLAB_NETWORK}
+    env_file:
+      - .env
 
 networks:
   gitlab_net:
     driver: bridge
-env_file:
-  - .env
