@@ -67,3 +67,5 @@ services:
 networks:
   gitlab_net:
     driver: bridge
+env_file:
+  - .env
