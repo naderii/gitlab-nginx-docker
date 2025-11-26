@@ -3,7 +3,7 @@ version: "3.9"
 services:
   gitlab:
     image: "gitlab/gitlab-ce:${GITLAB_VERSION}"
-    container_name: gitlab-server
+    container_name: gitlab
     restart: always
     ports:
       - "${GITLAB_SSH_PORT}:22"
