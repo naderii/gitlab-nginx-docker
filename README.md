@@ -17,13 +17,29 @@ cd gitlab-nginx-docker
 ```
 
 ### 2. ویرایش فایل کانفیگ‌ها
-فایل docker-compose.yml را ویرایش کنید و تنظیمات مربوط به gitlab-server و nginx را طبق نیاز خود تغییر دهید.
-فایل کانفیگ Nginx در مسیر nginx/conf/gitlab.conf قرار دارد. در صورت استفاده از HTTPS مسیر گواهی‌ها را بررسی و تنظیم کنید.
+فایل .env رو طبق نیاز تغیر دهید
+
 ### 3. ساخت و اجرای کانتینرها
 برای ساخت ایمیج‌ها و اجرای کانتینرها، دستور زیر را اجرا کنی
 ```bash
 docker-compose up --build -d
 ```
+### برای دریافت SSL اجرا کنید
+
+```bash
+docker compose run --rm certbot certonly \
+  --webroot -w /var/www/certbot \
+  -d ${GITLAB_DOMAIN} --email you@example.com --agree-tos --non-interactive
+```
+### بعد از تهیه گواهی:
+
+```bash
+cp certbot/conf/live/${GITLAB_DOMAIN}/* nginx/ssl/
+docker compose restart nginx
+
+```
+
+
 ### 4. دسترسی به GitLab
 پس از اجرا، می‌توانید از طریق مرورگر به GitLab دسترسی داشته باشید:
 
