@@ -5,10 +5,9 @@ services:
     image: "gitlab/gitlab-ce:${GITLAB_VERSION}"
     container_name: gitlab
     restart: always
+    # فقط پورت SSH بیرون
     ports:
       - "${GITLAB_SSH_PORT}:22"
-      - "8085:80"
-      - "8443:443"
     volumes:
       - ./gitlab/config:/etc/gitlab
       - ./gitlab/logs:/var/log/gitlab
@@ -18,9 +17,9 @@ services:
       GITLAB_OMNIBUS_CONFIG: |
         external_url 'https://${GITLAB_DOMAIN}'
         gitlab_rails['gitlab_shell_ssh_port'] = ${GITLAB_SSH_PORT}
-        nginx['enable'] = false
+        nginx['enable'] = false  # Nginx داخلی خاموش
     networks:
-      - ${GITLAB_NETWORK}
+      - gitlab_internal
     healthcheck:
       test: ["CMD", "curl", "-f", "http://localhost/-/health"]
       interval: 1m
@@ -42,17 +41,20 @@ services:
       - ./certbot/www:/var/www/certbot
     depends_on:
       - gitlab
+      - certbot
     networks:
-      - ${GITLAB_NETWORK}
+      - gitlab_internal
     env_file:
       - .env
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost/healthz"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
 
   certbot:
     image: certbot/certbot:latest
     container_name: certbot
-    ports:
-      - "8086:80"
-      - "8444:443"
     restart: always
     volumes:
       - ./certbot/conf:/etc/letsencrypt
@@ -66,10 +68,11 @@ services:
         sleep 12h;
       done"
     networks:
-      - ${GITLAB_NETWORK}
+      - gitlab_internal
     env_file:
       - .env
 
 networks:
-  gitlab_net:
+  gitlab_internal:
     driver: bridge
+    internal: true
